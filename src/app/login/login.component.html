@@ -1,0 +1,43 @@
+<div class="container align-middle d-flex flex-column justify-content-start
+align-items-center">
+
+  <div class="w-50 mb-4">
+    <img src="../../assets/img/Fichier 1.svg" alt="">
+  </div>
+
+  <h2 class="text-muted" >Sign in</h2>
+
+  <div class="d-flex item">
+    <mat-form-field appearance="fill" class="w-100">
+      <mat-label>Enter your email</mat-label>
+      <input matInput placeholder="user@example.com" [formControl]="email" required>
+      <button mat-icon-button matSuffix disabled> 
+      </button>
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+  </div>
+
+  <div class="d-flex mt-2 item">
+    <mat-form-field class="item" appearance="fill">
+      <mat-label>Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'">
+      <button mat-icon-button matSuffix 
+        (click)="hide = !hide" 
+        [attr.aria-label]="'Hide password'" 
+        [attr.aria-pressed]="hide">
+        <mat-icon>
+          {{hide ? 'visibility_off' : 'visibility'}}
+        </mat-icon>
+      </button>
+    </mat-form-field>
+  </div>      
+
+  <mat-checkbox class="align-self-start" color="primary">Remenber me</mat-checkbox>
+
+  <div class="d-flex mt-2 button-one">
+    <button mat-flat-button color="primary" class="button-one">Login</button>
+  </div>
+</div>
+
+
+
