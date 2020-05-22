@@ -3,9 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginModule } from './login/login.module';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { AppRoutingModule } from './app.routing.module';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
+import { HttpClientModule } from '@angular/common/http';
+import { EntryModule } from './entry/entry.module';
 
 
 @NgModule({
@@ -15,9 +18,12 @@ import { AppRoutingModule } from './app.routing.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    LoginModule,
     MatGridListModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    EntryModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,13 +1,29 @@
 
 <div class="text-center signin">
-  <form class="form-signin">
+  
+  <form [formGroup]="loginForm" class="form-signin" (submit)="login()">
+
     <img class="mb-5" src="../../assets/img/Fichier1.svg" alt="" height="72">
     <!-- <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1> -->
     <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    <input
+      #emailInput
+      formControlName="userName" 
+      type="email" 
+      id="inputEmail" 
+      class="form-control" 
+      placeholder="Email address"
+    >
     <br>
     <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <input 
+      type="password" 
+      id="inputPassword"
+      class="form-control"
+      placeholder="Password"
+      formControlName="password"  
+      required
+    >
     <div class="checkbox mt-4 mb-3">
       <label>
         <input type="checkbox" value="remember-me"> Remember me
