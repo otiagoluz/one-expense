@@ -17,11 +17,12 @@ export class Login2Component implements OnInit, AfterViewInit {
     private formBuilder: FormBuilder,
     private authService: AuthService,
     private router: Router,
+
   ) { }
   
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      userName: ['', Validators.required],
+      email: ['', Validators.required],
       password: ['', Validators.required]
     });
   }
@@ -32,10 +33,10 @@ export class Login2Component implements OnInit, AfterViewInit {
 
 
   login() {
-    const userName = this.loginForm.get('userName').value;
+    const email = this.loginForm.get('email').value;
     const password = this.loginForm.get('password').value;
     this.authService
-      .authenticate(userName, password)
+      .authenticate(email, password)
       .subscribe(
         () => this.router.navigate(['expenses']),
         err => {

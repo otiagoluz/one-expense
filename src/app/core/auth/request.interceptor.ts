@@ -13,8 +13,8 @@ constructor(private tokenService: TokenService) {}
     if(this.tokenService.hasToken()) {
       const token = this.tokenService.getToken();
       req = req.clone({
-        setHeaders: {
-          'x-access-token': token
+        setParams: {
+          'accessToken': token
         }
       });
     }

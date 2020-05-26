@@ -9,7 +9,7 @@ import { TokenService } from '../token/token.service';
 export class UserService {
 
   private userSubject = new BehaviorSubject<User>(null);
-  private userName: string;
+  private email: string;
 
   constructor(private tokenService: TokenService) {
     this.tokenService.hasToken() &&
@@ -18,7 +18,7 @@ export class UserService {
 
   setToken(token:string) {
     this.tokenService.setToken(token);
-    this.decodeAndNotify()
+    this.decodeAndNotify();
   } 
 
   getUser() {
@@ -28,7 +28,7 @@ export class UserService {
   private decodeAndNotify() {
     const token = this.tokenService.getToken();
     const user = jwt_decode(token) as User;
-    this.userName = user.name;
+    this.email = user.email;
     this.userSubject.next(user);
   }
 
@@ -42,6 +42,6 @@ export class UserService {
   }
 
   getUserName() {
-    return this.userName;
+    return this.email;
   }
 }
