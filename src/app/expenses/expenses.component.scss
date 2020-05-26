@@ -1,6 +1,7 @@
 .container-expense {
   background-color: #F5F8F8;
-  height: 100%;
+  height: auto;
+  min-height: 100%;; ;
 }
 
 .expense-list {
@@ -32,6 +33,11 @@
   max-height: 92px;
   background-color: #f4f4f4;
   border-radius: 50%;
+  overflow: hidden;
+  img {
+    width: 120%;
+    margin-left: -10px;
+  }
 }
 
 .text-expense {
