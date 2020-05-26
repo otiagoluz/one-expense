@@ -4,6 +4,7 @@ import { Login2Component } from './login2/login2.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { SignUpComponent } from './signUp/signUp.component';
+import { SignUpService } from './signUp/signUp.service';
 
 @NgModule({
   declarations: [
@@ -17,5 +18,8 @@ import { SignUpComponent } from './signUp/signUp.component';
     FormsModule,
     RouterModule
   ],
+  providers: [
+    SignUpService
+  ]
 })
 export class EntryModule {}

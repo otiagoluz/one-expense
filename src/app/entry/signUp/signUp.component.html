@@ -1,7 +1,5 @@
 <div class="signup text-center">
-  <form [formGroup]="" class="form-signin">
-
-
+  <form [formGroup]="signUpForm" class="form-signin" (submit)="signup()">
 
     <input
       #emailInput
@@ -25,7 +23,7 @@
       type="password" 
       class="form-control"
       placeholder="Confirm Password "
-      formControlName="passwordConfirm"  
+      formControlName="confirmPass"  
       required
     >
 
