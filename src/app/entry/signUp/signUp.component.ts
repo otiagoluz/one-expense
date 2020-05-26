@@ -1,5 +1,5 @@
 import { SignUpService } from './signUp.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { sameValidator } from 'src/app/shared/validators/sameValidator';
 import { NewUser } from './new-user';
@@ -9,9 +9,10 @@ import { Router } from '@angular/router';
   templateUrl: './signUp.component.html',
   styleUrls: ['./signUp.component.scss'],
 })
-export class SignUpComponent implements OnInit {
+export class SignUpComponent implements OnInit, AfterViewInit {
   
   signUpForm: FormGroup;
+  @ViewChild('emailInput') emailInput:ElementRef<HTMLInputElement>;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -28,11 +29,17 @@ export class SignUpComponent implements OnInit {
         Validators.required,
         Validators.minLength(6),
         Validators.maxLength(18),
-        Validators.pattern('^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|\]).{6,32}$')]],
+        // Validators.pattern('^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|\]).{6,32}$')
+      ]],
         confirmPass: ['', [
-        sameValidator
+          Validators.required
+        // sameValidator
       ]]
     });
+  }
+
+  ngAfterViewInit(): void {
+    this.emailInput.nativeElement.focus();
   }
 
   signup() {

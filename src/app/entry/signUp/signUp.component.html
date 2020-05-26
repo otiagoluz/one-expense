@@ -1,5 +1,5 @@
 <div class="signup text-center">
-  <form [formGroup]="signUpForm" class="form-signin" (submit)="signup()">
+  <form [formGroup]="signUpForm" class="form-signup" (submit)="signup()">
 
     <input
       #emailInput
@@ -7,7 +7,7 @@
       type="email" 
       class="form-control" 
       placeholder="Email address"
-    >
+      required >
     <br>
 
     <input 
@@ -15,8 +15,7 @@
       class="form-control"
       placeholder="Password"
       formControlName="password"  
-      required
-    >
+      required >
     <br>
 
     <input 
@@ -28,13 +27,12 @@
     >
 
     <div class="checkbox mt-4 mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
+      <input type="checkbox" value="remember-me"> 
+      <p class="text-left">Creating an account means you’re okay with our <a href="#">Terms of Service, Privacy Policy.</a></p>
     </div>
     
-    <button class="btn btn-primary btn-block" type="submit">Sign in</button>
-    <p class="text-muted mt-3">Not a member? <a [routerLink]="['/signUp']"> Sign up now</a></p>
+    <button [disabled]="signUpForm.invalid" class="btn btn-primary btn-block" type="submit">Sign Up</button>
+    <p class="text-muted mt-3">Already a user?<a [routerLink]="['/login']"> Sign In</a></p>
     <p class="mt-5 text-muted">&copy; 2019-2020</p>
   </form>
 
