@@ -4,11 +4,11 @@ import { AuthService } from 'src/app/core/auth/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login2',
-  templateUrl: './login2.component.html',
-  styleUrls: ['./login2.component.scss']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
-export class Login2Component implements OnInit, AfterViewInit {
+export class LoginComponent implements OnInit, AfterViewInit {
 
   loginForm: FormGroup;
   @ViewChild('emailInput') emailInput:ElementRef<HTMLInputElement>;
