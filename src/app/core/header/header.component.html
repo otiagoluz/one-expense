@@ -1,20 +1,13 @@
-<header class="fixed-top">
+<header class="fixed-top" *ngIf="(user$ | async) as user; else login">
   <nav class="navbar navbar-light bg-white">
-    <a class="navbar-brand">OneExpense</a>
 
-    <div *ngIf="(user$ | async) as user; else login">
+    <a class="navbar-brand">OnePic</a>
+    <div>
       <i class="fa fa-user-circle mr-1"></i>
       <a class="mr-1">{{ user.email }}</a>
-      <button class="btn btn-primary btn-sm" (click)="logout()">logout</button>
+      <button class="btn btn-primary btn-sm" (click)="logout()">logout </button>
     </div>
-
-    <ng-template #login>
-      <span class="navbar-text">
-        <button class="btn btn-primary btn-sm" [routerLink]="['']" >Please, login!</button>
-      </span>
-    </ng-template>
-
-
-
-  </nav>
-</header>
+    
+    </nav>
+  </header>
+  <ng-template #login></ng-template>
