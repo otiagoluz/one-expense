@@ -1,1 +1,18 @@
-<p>footer works!</p>
+<footer class="mt-5" *ngIf="(user$ | async) as user; else noFooter">
+  <div class="fixed-bottom bg-white p-2">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-4">
+          <i class="fa fa-home fa-2x"></i>
+        </div>
+        <div class="col-4">
+          <i class="fa fa-home fa-2x"></i>
+        </div>
+        <div class="col-4">
+          <i class="fa fa-plus-circle fa-2x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<ng-template #noFooter></ng-template>

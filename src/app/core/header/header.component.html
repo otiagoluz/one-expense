@@ -1,4 +1,4 @@
-<header class="fixed-top" *ngIf="(user$ | async) as user; else login">
+<header class="fixed-top" *ngIf="(user$ | async) as user; else noHeader">
   <nav class="navbar navbar-light bg-white">
 
     <a class="navbar-brand">OnePic</a>
@@ -10,4 +10,4 @@
     
     </nav>
   </header>
-  <ng-template #login></ng-template>
+  <ng-template #noHeader></ng-template>
