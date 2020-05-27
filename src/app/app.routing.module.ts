@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ExpensesComponent } from './expenses/expenses.component';
+import { AuthGuard } from './core/auth/auth.guard';
 
 
 
@@ -14,7 +15,7 @@ const routes: Routes = [
       .then(h => h.EntryModule)
   },
 
-  { path: 'expenses', component: ExpensesComponent },
+  { path: 'expenses', component: ExpensesComponent, canActivate: [AuthGuard] },
 
 ];
 
