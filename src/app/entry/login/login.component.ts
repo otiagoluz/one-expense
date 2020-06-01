@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
     this.authService
       .authenticate(email, password)
       .subscribe(
-        () => this.router.navigate(['expenses']),
+        () => this.router.navigate(['reports']),
         err => {
           console.log(err);
           this.loginForm.reset();

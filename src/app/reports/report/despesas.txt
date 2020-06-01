@@ -1,0 +1,12 @@
+Open -> Closed -> Received - Paid 
+
+
+ID Usuario -> empresa
+
+
+
+Primeira Fase:
+  Pré MVP Produto 
+
+Segunda fase : 
+ MVP Produto Pronto

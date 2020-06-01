@@ -1,0 +1,16 @@
+<div class="container-report">
+  <button routerLink='/' >back</button>
+  <div class="report-list">
+    <div *ngIf="( expenses$ | async ) as expenses">
+      <ol class="list-unstyled">
+        <li *ngFor="let expense of expenses">
+
+          <oe-expense
+            [url]="expense.image"
+            [title]="expense.description"
+            [value]="expense.amount">
+          </oe-expense>
+
+        </li>
+      </ol>
+    </div>

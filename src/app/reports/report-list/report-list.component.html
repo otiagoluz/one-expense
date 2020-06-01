@@ -1,0 +1,15 @@
+<div class="container-report">
+  <div class="report-list">
+
+    <div *ngIf="( reports$ | async ) as reports">
+      <ol class="list-unstyled">
+        <li *ngFor="let report of reports">
+          <a [routerLink]="['/report', report.id]">
+            <oe-report
+              [title]="report.description"
+              [value]="report.total">
+            </oe-report>
+          </a>
+        </li>
+      </ol>
+    </div>

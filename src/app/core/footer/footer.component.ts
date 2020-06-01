@@ -3,6 +3,9 @@ import { UserService } from '../user/user.service';
 import { User } from '../user/user';
 import { Observable } from 'rxjs';
 
+
+
+
 @Component({
   selector: 'oe-footer',
   templateUrl: './footer.component.html',
@@ -11,6 +14,7 @@ import { Observable } from 'rxjs';
 export class FooterComponent implements OnInit {
 
   user$: Observable<User>;
+
 
   constructor(
     private userService:UserService

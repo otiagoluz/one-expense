@@ -1,0 +1,21 @@
+.container-report {
+  background-color: #F5F8F8;
+  height: auto;
+  min-height: 100%;
+  margin-top: 40px;
+  a {
+    color:black;
+    text-decoration: none;
+  }
+}
+
+.report-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+  box-sizing: border-box;
+}
+

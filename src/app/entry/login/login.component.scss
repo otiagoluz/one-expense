@@ -52,3 +52,18 @@
   margin-bottom: 10px;
   border-radius: 10px;
 }
+
+.btn-good {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 60px;
+  border-radius: .60rem;
+  border: 1px solid transparent;
+  transition: 0.3s;
+  box-shadow: 0 0 20px rgba($color: #007bff, $alpha: 0.5);
+  &:hover {
+    transition: color .15s;
+    filter: brightness(90%);
+  }
+  &:disabled { opacity: .65; }
+}

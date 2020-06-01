@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ExpensesComponent } from './expenses/expenses.component';
 import { AuthGuard } from './core/auth/auth.guard';
+import { ReportListComponent } from './reports/report-list/report-list.component';
+import { ReportDetailComponent } from './reports/report-detail/report-detail.component';
 
 
 
@@ -15,7 +16,11 @@ const routes: Routes = [
       .then(h => h.EntryModule)
   },
 
-  { path: 'expenses', component: ExpensesComponent, canActivate: [AuthGuard] },
+  { path: 'reports', component: ReportListComponent, canActivate: [AuthGuard] },
+
+  { path: 'report/:id', component: ReportDetailComponent, canActivate: [AuthGuard] },
+
+
 
 ];
 

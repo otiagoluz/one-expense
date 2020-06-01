@@ -10,6 +10,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { EntryModule } from './entry/entry.module';
 import { CoreModule } from './core/core.module';
+import { ReportsModule } from './reports/reports.module';
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { CoreModule } from './core/core.module';
     FormsModule,
     EntryModule,
     HttpClientModule,
-    CoreModule
+    CoreModule,
+    ReportsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
