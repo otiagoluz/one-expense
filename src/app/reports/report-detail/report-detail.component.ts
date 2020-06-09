@@ -15,7 +15,6 @@ export class ReportDetailComponent implements OnInit {
   expenses$: Observable<Expense[]>;
   id: string;
 
-  
   constructor(
     private reportService: ReportService,
     private activateRoute: ActivatedRoute

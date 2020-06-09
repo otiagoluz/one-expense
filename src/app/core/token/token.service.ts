@@ -14,7 +14,11 @@ export class TokenService {
   }
 
   getToken() {
-    return window.localStorage.getItem('accessToken');
+    return window.localStorage.getItem(KEY);
+  }
+
+  getTokenBearer() {
+    return 'Bearer ' + window.localStorage.getItem(KEY);
   }
 
   removeToken() {

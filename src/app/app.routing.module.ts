@@ -4,6 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './core/auth/auth.guard';
 import { ReportListComponent } from './reports/report-list/report-list.component';
 import { ReportDetailComponent } from './reports/report-detail/report-detail.component';
+import { PhotoExpenseComponent } from './expenses/expense/photo/photoExpense.component';
+
 
 
 
@@ -19,6 +21,8 @@ const routes: Routes = [
   { path: 'reports', component: ReportListComponent, canActivate: [AuthGuard] },
 
   { path: 'report/:id', component: ReportDetailComponent, canActivate: [AuthGuard] },
+
+  { path: 'photo', component: PhotoExpenseComponent, canActivate: [AuthGuard] },
 
 
 
