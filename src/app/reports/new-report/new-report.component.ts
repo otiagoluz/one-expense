@@ -21,7 +21,7 @@ export class NewReportComponent implements OnInit {
 
   ngOnInit(): void {
     this.newReportForm = this.formBuilder.group({
-      description: ['', [
+      Description: ['', [
         Validators.required,
         Validators.minLength(6),
         Validators.maxLength(18),
@@ -31,6 +31,7 @@ export class NewReportComponent implements OnInit {
 
   createReport() {
     const newReport = this.newReportForm.getRawValue() as NewReport;
+    console.log(newReport);
     this.reportService
       .addReport(newReport)
       .subscribe(() => this.router.navigate(['']), 

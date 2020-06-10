@@ -36,8 +36,9 @@ export class ReportService {
   }
 
   addReport(report: NewReport) {
+    console.log(report);
     return this.http.post<NewReport>(
-      API_URL + 'ExpenseReport', { report }, 
+      API_URL + '/ExpenseReport', report, 
       { headers: this.authService.authHeader() }
     )
   }

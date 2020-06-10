@@ -6,17 +6,21 @@ import { ReportDetailComponent } from './report-detail/report-detail.component';
 import { RouterModule } from '@angular/router';
 import { ExpensesModule } from '../expenses/expenses.module';
 import { NewReportComponent } from './new-report/new-report.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     ReportComponent, 
     ReportListComponent, 
-    ReportDetailComponent, NewReportComponent
+    ReportDetailComponent, 
+    NewReportComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
-    ExpensesModule
+    ExpensesModule,
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   exports: [

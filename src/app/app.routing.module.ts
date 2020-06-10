@@ -5,6 +5,7 @@ import { AuthGuard } from './core/auth/auth.guard';
 import { ReportListComponent } from './reports/report-list/report-list.component';
 import { ReportDetailComponent } from './reports/report-detail/report-detail.component';
 import { PhotoExpenseComponent } from './expenses/expense/photo/photoExpense.component';
+import { NewReportComponent } from './reports/new-report/new-report.component';
 
 
 
@@ -23,6 +24,10 @@ const routes: Routes = [
   { path: 'report/:id', component: ReportDetailComponent, canActivate: [AuthGuard] },
 
   { path: 'photo', component: PhotoExpenseComponent, canActivate: [AuthGuard] },
+
+  { path: 'createReport', component: NewReportComponent, canActivate: [AuthGuard] },
+
+
 
 
 

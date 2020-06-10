@@ -1,1 +1,15 @@
-<p>new-report works!</p>
+<div class="text-center">
+  <form [formGroup]="newReportForm" class="form-signup mt-5" (submit)="createReport()">
+
+    <input
+      #emailInput
+      formControlName="Description" 
+      type="text" 
+      class="form-control" 
+      placeholder="Report name"
+      required 
+    >
+
+    <button [disabled]="newReportForm.invalid" class="btn-good" type="submit">Create Report</button>
+  </form>
+</div>

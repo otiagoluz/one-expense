@@ -1,7 +1,6 @@
 import { SignUpService } from './signUp.service';
 import { Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { sameValidator } from 'src/app/shared/validators/sameValidator';
 import { NewUser } from './new-user';
 import { Router } from '@angular/router';
 
