@@ -14,6 +14,7 @@ export class ReportDetailComponent implements OnInit {
 
   expenses$: Observable<Expense[]>;
   id: string;
+  createExpense: boolean = false;
 
   constructor(
     private reportService: ReportService,
@@ -25,6 +26,11 @@ export class ReportDetailComponent implements OnInit {
       this.id = parms.id });
     this.expenses$ = this.reportService.getReportDetail(this.id)
       .pipe(map(expense => expense.details));
+  }
+
+
+  showCreate() {
+    this.createExpense = true;
   }
 
 }

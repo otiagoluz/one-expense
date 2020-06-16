@@ -1,0 +1,35 @@
+<div class="text-center">
+  <form [formGroup]="newExpenseForm" class="form-signup mt-5" (submit)="creteExpense()">
+
+    <input
+      formControlName="description" 
+      type="text" 
+      class="form-control" 
+      placeholder="Expense name"
+      required 
+    >
+
+    <input
+      formControlName="supplier" 
+      type="text" 
+      class="form-control" 
+      placeholder="Suplier"
+      required 
+    >
+    <input
+      formControlName="amount" 
+      type="number" 
+      class="form-control" 
+      placeholder="0.00"
+      required 
+    >
+    <input
+      formControlName="imageUpload" 
+      type="file" 
+      class="form-control" 
+      placeholder="Report name"
+    >
+    
+    <button [disabled]="" class="btn-good" type="submit">Add Expense</button>
+  </form>
+</div>

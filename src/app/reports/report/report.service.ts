@@ -1,8 +1,7 @@
-import { TokenService } from './../../core/token/token.service';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Report } from './report';
-import { tap } from 'rxjs/operators';
 import { AuthService } from 'src/app/core/auth/auth.service';
 import { NewReport } from './newReport';
 

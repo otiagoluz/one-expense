@@ -6,6 +6,7 @@ import { ReportListComponent } from './reports/report-list/report-list.component
 import { ReportDetailComponent } from './reports/report-detail/report-detail.component';
 import { PhotoExpenseComponent } from './expenses/expense/photo/photoExpense.component';
 import { NewReportComponent } from './reports/new-report/new-report.component';
+import { NewExpenseComponent } from './expenses/new-expense/new-expense.component';
 
 
 
@@ -26,7 +27,7 @@ const routes: Routes = [
   { path: 'photo', component: PhotoExpenseComponent, canActivate: [AuthGuard] },
 
   { path: 'createReport', component: NewReportComponent, canActivate: [AuthGuard] },
-
+  
 
 
 

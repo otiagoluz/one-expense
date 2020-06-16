@@ -19,3 +19,9 @@
   box-sizing: border-box;
 }
 
+.panel-control {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 6rem 2rem 6rem;
+}
+

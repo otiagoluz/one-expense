@@ -1,6 +1,16 @@
 <div class="container-report">
-  <button routerLink='/' >back</button>
   <div class="report-list">
+    <div class="panel-control">
+      <button routerLink='/' >back</button>
+      <button (click)="showCreate()">Add Expense</button>
+    </div>
+
+    <div *ngIf="(createExpense)">
+      <op-new-expense
+      [id]="id">
+      </op-new-expense>
+    </div>
+
     <div *ngIf="( expenses$ | async ) as expenses">
       <ol class="list-unstyled">
         <li *ngFor="let expense of expenses">

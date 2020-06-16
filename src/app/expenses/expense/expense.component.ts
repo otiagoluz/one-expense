@@ -1,7 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-
-
 @Component({
   selector: 'oe-expense',
   templateUrl: './expense.component.html',

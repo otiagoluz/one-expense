@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExpenseComponent } from './expense/expense.component';
 import { PhotoExpenseComponent } from './expense/photo/photoExpense.component';
+import { NewExpenseComponent } from './new-expense/new-expense.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -9,13 +11,17 @@ import { PhotoExpenseComponent } from './expense/photo/photoExpense.component';
 @NgModule({
   declarations: [
     ExpenseComponent,
-    PhotoExpenseComponent, 
+    PhotoExpenseComponent,
+    NewExpenseComponent, 
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
-    ExpenseComponent
+    ExpenseComponent,
+    NewExpenseComponent
   ],
 })
 export class ExpensesModule { }
